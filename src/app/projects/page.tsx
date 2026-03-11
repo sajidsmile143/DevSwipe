@@ -151,10 +151,12 @@ export default function ProjectsPage() {
                     <div className="h-px w-full bg-white/5 mb-2" />
                     <Button 
                       onClick={() => applyMutation.mutate({ projectId: project.id, ownerId: project.userId, projectTitle: project.title })}
-                      disabled={applyMutation.isPending}
+                      disabled={applyMutation.isPending && applyMutation.variables?.projectId === project.id}
                       className="w-full h-14 bg-white text-slate-950 hover:bg-white/90 rounded-2xl font-black transition-all flex items-center justify-center gap-2 group/btn"
                     >
-                       {applyMutation.isPending ? <Loader2 className="animate-spin h-5 w-5" /> : (
+                       {applyMutation.isPending && applyMutation.variables?.projectId === project.id ? (
+                         <Loader2 className="animate-spin h-5 w-5" />
+                       ) : (
                          <>
                            Apply to Collaborate
                            <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
