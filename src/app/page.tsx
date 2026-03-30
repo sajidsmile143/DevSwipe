@@ -20,7 +20,7 @@ export default async function Home() {
         <div className="mb-10 animate-float">
           <div className="px-4 py-1.5 rounded-full glass border-indigo-500/20 text-indigo-300 text-sm font-medium flex items-center gap-2 group cursor-default">
             <Sparkles className="h-4 w-4" />
-            <span>DevSwipe v1.0 is officially open</span>
+            <span>DevSwipe v1.1 is officially open (CI/CD Tested!)</span>
             <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </div>
