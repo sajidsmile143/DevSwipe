@@ -18,8 +18,41 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "DevSwipe - Find Your Next Project Partner",
-  description: "Swipe, connect, and collaborate with developers on amazing projects.",
+  metadataBase: new URL("https://dev-swipe-eight.vercel.app/"),
+  title: "DevSwipe - The Tinder for Developers",
+  description: "Swipe, match, and build your dream team. The ultimate matching platform to find co-founders and developers for your next groundbreaking project.",
+  keywords: ["developer matchmaking", "find a co-founder", "programmer networking", "tinder for devs", "devswipe", "open source collaboration"],
+  
+  // Facebook, LinkedIn, aur WhatsApp waghera isko parhte hain
+  openGraph: {
+    type: "website",
+    url: "https://dev-swipe-eight.vercel.app/",
+    title: "DevSwipe | Swipe. Match. Code.",
+    description: "The smartest way to find developers who complement your tech stack. Start building your dream team today.",
+    siteName: "DevSwipe",
+    images: [
+      {
+        url: "/og.png", // Aapke public folder mein rakhi hui image yahan fetch hogi
+        width: 1200,
+        height: 630,
+        alt: "DevSwipe - Find Your Dev Partner",
+      },
+    ],
+  },
+  
+  // Twitter is SEO part ko parhta hai
+  twitter: {
+    card: "summary_large_image",
+    title: "DevSwipe - Connect with Top Developers",
+    description: "Looking for a React developer? Or a Prisma expert? Swipe and build your team on DevSwipe.",
+    images: ["/og.png"],
+    creator: "@sajidsmile",
+  },
+  
+  // Favicon updates jaha zaroorat ho
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
